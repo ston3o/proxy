@@ -9,6 +9,7 @@ if [ ! -f $INITIAL_SETUP_LOCK ]; then
         -e 's/$EVENTS_HOST/'$EVENTS_HOST'/' \
         -e 's/$CERT_NAME/'$CERT_NAME'/' \
         -e 's/$CERT_KEY/'$CERT_KEY'/' \
+        -e 's/$SCHEME/'$SCHEME'/' \
         -i /tmp/taiga-conf/nginx.conf
     cp /tmp/taiga-conf/nginx.conf /taiga-conf/
     ln -sf /taiga-conf/nginx.conf /etc/nginx/conf.d/nginx.conf
